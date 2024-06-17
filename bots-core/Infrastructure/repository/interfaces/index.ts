@@ -1,0 +1,1 @@
+export {IBotCoreDbRepository} from "./bot-core-database-repository.interface"

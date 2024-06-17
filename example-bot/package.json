@@ -1,0 +1,30 @@
+{
+  "name": "example-bot",
+  "version": "1.0.0",
+  "author": "it-incubator",
+  "scripts": {
+    "start": "node dist/example-bot/src/app.js",
+    "build": "tsc --outDir ../example-bot-deploy/dist",
+    "start-dev": "nodemon --inspect dist/example-bot/src/app.js",
+    "start-dev-no-inspect": "nodemon dist/example-bot/src/app.js",
+    "watch-dev": "tsc -w",
+    "test": "jest --config src/jest.config.js",
+    "clean": "rimraf ../example-bot-deploy/dist",
+    "ngrok": "ngrok http 3087 -host-header=\"localhost:3087\""
+  },
+  "dependencies": {
+    "express": "4.19.2",
+    "axios": "1.7.2",
+    "mongoose": "8.4.1",
+    "rimraf": "5.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.2",
+    "@types/express": "4.17.21",
+    "nodemon": "^1.19.1",
+    "@types/jest": "^26.0.22",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.4",
+    "typescript": "5.4.5"
+  }
+}
